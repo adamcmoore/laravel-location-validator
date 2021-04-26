@@ -15,10 +15,10 @@
         "location"
     ],
     "require": {
-        "php": ">=7.2",
-        "illuminate/console": "^6.2",
-        "illuminate/database": "^6.2",
-        "illuminate/filesystem": "^6.2",
+        "php": ">=7.3",
+        "illuminate/console": "^6|^8",
+        "illuminate/database": "^6|^8",
+        "illuminate/filesystem": "^6|^8",
         "league/geotools": "^0.8"
     },
     "require-dev": {
