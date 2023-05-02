@@ -14,25 +14,24 @@ class LocationValidator implements Rule
 	 *
 	 * @var string
 	 */
-	protected $longitude;
+	protected string $longitude;
 
 
 	/**
 	 * The area
 	 *
-	 * @var array and array of longitude & latitude pairs
+	 * @var Polygon of longitude & latitude pairs
 	 */
-	protected $area;
+	protected Polygon $area;
 
 
 	/**
 	 * Create a new rule instance.
 	 *
-	 * @param  string  $table
-	 * @param  string  $column
-	 * @return void
+	 * @param $longitude
+	 * @param array $area
 	 */
-	public function __construct($longitude, $area)
+	public function __construct($longitude, array $area)
 	{
 		$this->longitude = $longitude;
 
@@ -49,9 +48,9 @@ class LocationValidator implements Rule
 	 *
 	 * @return bool
 	 */
-	public function passes($attribute, $latitude)
+	public function passes($attribute, $value): bool
 	{
-		return $this->area->pointInPolygon(new Coordinate([$latitude, $this->longitude]));
+		return $this->area->pointInPolygon(new Coordinate([$value, $this->longitude]));
 	}
 
 
@@ -60,9 +59,9 @@ class LocationValidator implements Rule
 	 *
 	 * @return string
 	 */
-	public function message()
+	public function message(): string
 	{
-		return ':attribute is ouside of the allowed area.';
+		return ':attribute is outside of the allowed area.';
 	}
 
 }

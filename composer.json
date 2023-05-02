@@ -15,17 +15,16 @@
         "location"
     ],
     "require": {
-        "php": ">=7.3",
-        "illuminate/console": "^6|^8",
-        "illuminate/database": "^6|^8",
-        "illuminate/filesystem": "^6|^8",
-        "league/geotools": "^0.8"
+        "php": "^8.1",
+        "illuminate/console": "^10",
+        "illuminate/database": "^10",
+        "illuminate/filesystem": "^10",
+        "league/geotools": "^1.1"
     },
     "require-dev": {
-        "phpunit/phpunit": "^9.5",
+        "phpunit/phpunit": "^10",
         "mockery/mockery": "^1.0",
-        "orchestra/testbench": ">=3.5",
-        "orchestra/database": ">=3.5"
+        "orchestra/testbench": "^8.5"
     },
     "autoload": {
         "psr-4": {
