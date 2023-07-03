@@ -1,7 +1,7 @@
 <?php
 namespace AcMoore\LocationValidator\Tests;
 
-use Validator;
+use Illuminate\Support\Facades\Validator;
 use AcMoore\LocationValidator\LocationValidator;
 
 

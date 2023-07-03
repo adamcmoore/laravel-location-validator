@@ -14,7 +14,7 @@ class LocationValidator implements Rule
 	 *
 	 * @var string
 	 */
-	protected string $longitude;
+	protected ?string $longitude;
 
 
 	/**
